@@ -49,5 +49,4 @@ class UITestPracticeAppUITests: XCTestCase {
         let buttonsCount = app.buttons.count
         XCTAssertEqual(buttonsCount, 1)
     }
-
 }

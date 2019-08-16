@@ -17,7 +17,14 @@ default_platform(:ios)
 
 platform :ios do
   desc "Description of what the lane does"
-  lane :example do
-    puts("First lane, whaddup.")
+  lane :ui_test do
+    scan(
+      scheme: "UITestPracticeApp",
+      code_coverage: true,
+      output_types: "junit",
+      output_directory: "./output",
+      output_style: "rspec",
+      device: 'iPhone X'
+    )
   end
 end
